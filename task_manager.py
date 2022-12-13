@@ -85,9 +85,9 @@ e - Exit
             description = input("Enter task description: ")
             due_date = input("When is it due?: ")
             current_date = date.today()
-            format = current_date.strftime("%d %b %Y")
+            date_format = current_date.strftime("%d %b %Y")
             completion = "No"
-            g.write(f'\n{username}, {title}, {description}, {due_date}, {format}, {completion}')
+            g.write(f'\n{username}, {title}, {description}, {due_date}, {date_format}, {completion}')
 
         g.close()
 
