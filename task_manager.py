@@ -57,6 +57,7 @@ e - Exit
     #if you aren't the admin, a message letting you know will be displayed
     #a new username and password are entered. the password is confirmed
     #if both passwords match, the registering was successful
+    #if they don't, they get a message letting them know
     if menu == 'r':
         with open('user.txt', 'a+') as g:
             if username == "admin":
@@ -74,7 +75,7 @@ e - Exit
 
             g.close()
 
-    #if they choose this option
+    #if they choose to add a new task
     #the details of the task are entered by the user
     #it is then written to the tasks.txt file
     elif menu == 'a':
@@ -91,7 +92,7 @@ e - Exit
         g.close()
 
     #if they choose to view all tasks
-    #all the tasks in tasks.txt file are displayed in a easy to read format
+    #all the tasks in tasks.txt file are displayed in a easy to read format using the index
     elif menu == 'va':
         with open("tasks.txt", 'r') as g:
             for viewing in g:
@@ -108,7 +109,7 @@ Task description:\t {contents[2]}\n''')
 
     #if the user chooses to view their tasks
     #only their tasks are retreived using the index and username
-    #the tasks are displayed in a easy to read format
+    #the tasks are displayed in a easy to read format using the index
     elif menu == 'vm':
         with open("tasks.txt", 'r') as g:
             for viewing in g:
